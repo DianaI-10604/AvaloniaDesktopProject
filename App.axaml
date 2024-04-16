@@ -1,0 +1,19 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="AvaloniaDesktopProject.App"
+             RequestedThemeVariant="Default">
+             <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
+
+    <Application.Styles>
+        <FluentTheme />	
+    </Application.Styles>
+
+	<Application.Resources>
+		<LinearGradientBrush x:Key="TextBoxGradient"
+							 StartPoint="75%, 100%" EndPoint="0,1">
+			<GradientStop Color="Blue" Offset="0"/>
+			<GradientStop Color="Red" Offset="1"/>
+		</LinearGradientBrush>
+		
+	</Application.Resources>
+</Application>

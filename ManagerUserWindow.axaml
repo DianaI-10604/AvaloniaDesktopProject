@@ -1,0 +1,101 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="700" d:DesignHeight="400"
+		Width="700"
+		Height="400"
+        x:Class="AvaloniaDesktopProject.ManagerUserWindow"
+        x:CompileBindings="False"
+		Title="ManagerUserWindow"
+		Background="Transparent">
+	<Border Background="#08021c">
+		<Border.Background>
+			<LinearGradientBrush StartPoint="75%, 100%"
+								 EndPoint="0, 1">
+				<GradientStop Color="#0c1b52"
+							  Offset="0.3"/>
+				<GradientStop Color="#0d1680"
+							  Offset="0.8"/>
+			</LinearGradientBrush>
+		</Border.Background>
+
+		<Grid ShowGridLines="True" RowDefinitions="*, 4*, *" ColumnDefinitions="*, 4*, *">
+			
+			<StackPanel Grid.Row="1" Grid.Column="1">
+				<ListBox Width="460" Height="265"
+						Background="White"
+						CornerRadius="10">
+				
+				</ListBox>
+			</StackPanel>
+			
+			<Border x:Name="BorderSidebar" CornerRadius="1 10 10 1" Grid.Row="0" Grid.RowSpan="4" Height="400"
+					Background="#1e46d7" HorizontalAlignment="Left" Width="40">
+				
+				<DockPanel x:Name="MenuPanel" Width="40"
+					   HorizontalAlignment="Left">
+				
+					<StackPanel DockPanel.Dock="Left">
+
+						<Button Content=">"
+								Margin="5"
+								Click="ToggleMenu_Click"
+								HorizontalAlignment="Right"
+								Background="White"
+								Foreground="#1e46d7"
+								FontWeight="Bold"/>
+
+						<StackPanel>
+							<TextBlock Name="Status"
+									   Text=""
+									   FontWeight="Bold"
+									   Foreground="White"
+									   FontSize="20"
+									   Margin="10 50 0 0"/>
+							
+							<TextBlock Name="Login"
+									   FontWeight="Bold"
+									   Text=""
+									   Foreground="White"
+									   FontSize="20"
+									   Margin="10 10 0 0"/>
+						
+							<Button Name="GoToAuthorization" 
+									Content="Выйти"
+									FontFamily="nunito"
+									FontWeight="Bold"
+									Background="#0c1b52"
+									IsVisible="False"
+									Foreground="White"
+									Margin="10 200"
+									FontSize="20">
+								
+							</Button>
+						</StackPanel>
+					</StackPanel>
+				</DockPanel>
+			</Border>
+			
+		<StackPanel Grid.Row="0" Grid.Column="1" VerticalAlignment="Bottom">
+			<TextBlock Text="Список товаров"
+					   HorizontalAlignment="Left"
+					   VerticalAlignment="Bottom"
+					   
+					   FontSize="30"
+					   Foreground="White"
+					   FontWeight="Bold"
+					   FontFamily="nunito"/>
+		</StackPanel>
+		
+		<StackPanel Grid.Row="2" Grid.Column="1">
+			<TextBlock Text="Вы можете только просматривать товары"
+					   HorizontalAlignment="Center"
+					   Margin="10"
+					   FontSize="18"
+					   Foreground="#f35555"
+					   TextDecorations="Underline"/>
+		</StackPanel>
+		</Grid>
+	</Border>
+</Window>
